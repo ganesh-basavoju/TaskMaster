@@ -8,12 +8,13 @@ import {
   import toast from "react-hot-toast";
   import { useNavigate } from "react-router-dom";
   
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const Profile = () => {
     const navigate = useNavigate();
   
     async function handleLogout() {
       try {
-        const response = await fetch("http://localhost:3000/api/user/logout", {
+        const response = await fetch(`${API_BASE_URL}/api/user/logout`, {
           method: "POST",
           credentials: "include",
         });

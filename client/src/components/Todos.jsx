@@ -8,6 +8,7 @@ import useSWR from "swr";
 import { Input } from "./ui/input";
 import Profile from "./Profile";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const fetcher = (url, options = {}) =>
   fetch(url, {
     method: options.method || "GET",
@@ -19,7 +20,7 @@ const fetcher = (url, options = {}) =>
 
 const Todos = () => {
   const { data, error, mutate } = useSWR(
-    "http://localhost:3000/api/todos",
+    "https://taskmaster-m1ot.onrender.com/api/todos",
     fetcher
   );
 
@@ -53,7 +54,7 @@ const Todos = () => {
     };
 
     async function addTodo() {
-      const response = await fetcher("http://localhost:3000/api/todos", {
+      const response = await fetcher(`${API_BASE_URL}/api/todos`, {
         method: "POST",
         body: { title },
       });
