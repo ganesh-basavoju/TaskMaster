@@ -1,0 +1,22 @@
+{
+  "name": "todo-application",
+  "version": "1.0.0",
+  "description": "🚀 **Task Accomplished:**\r I am thrilled to share the successful completion of my latest project—a fully functional To-Do application built with the MERN stack, Vite.js, Tailwind CSS, and SWR!",
+  "main": "index.js",
+  "scripts": {
+    "build":"",
+    "start":""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganesh-basavoju/SCT_WD_4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ganesh-basavoju/SCT_WD_4/issues"
+  },
+  "homepage": "https://github.com/ganesh-basavoju/SCT_WD_4#readme"
+}
