@@ -20,7 +20,7 @@ const fetcher = (url, options = {}) =>
 
 const Todos = () => {
   const { data, error, mutate } = useSWR(
-    "https://taskmaster-m1ot.onrender.com/api/todos",
+    `${API_BASE_URL}/api/todos`,
     fetcher
   );
 
@@ -78,7 +78,7 @@ const Todos = () => {
     await mutate(
       async () => {
         const response = await fetcher(
-          `http://localhost:3000/api/todos/${id}`,
+          `${API_BASE_URL}/api/todos/${id}`,
           {
             method: "DELETE",
           }
@@ -101,7 +101,7 @@ const Todos = () => {
       await mutate(
         async () => {
           const response = await fetcher(
-            `http://localhost:3000/api/todos/${id}`,
+            `${API_BASE_URL}/api/todos/${id}`,
             {
               method: "PUT",
               body: { isCompleted: !isCompleted },
@@ -132,7 +132,7 @@ const Todos = () => {
     await mutate(
       async () => {
         const response = await fetcher(
-          `http://localhost:3000/api/todos/${id}`,
+          `${API_BASE_URL}/api/todos/${id}`,
           {
             method: "PUT",
             body: { title },
