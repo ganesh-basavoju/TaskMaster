@@ -23,6 +23,8 @@ const Todos = () => {
     `${API_BASE_URL}/api/todos`,
     fetcher
   );
+  console.log("API URL:", `${API_BASE_URL}/api/todos`);
+
 
   if (error) {
     return <h1 className="text-2xl py-2 text-center">Something went wrong</h1>;
